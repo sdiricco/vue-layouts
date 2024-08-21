@@ -1,8 +1,31 @@
 body{
     margin: 0px;
     height: 100vh;
+    width: 100vw;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 #app{
     height: 100%;
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+.button{
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    background-color: #ccc;
+    cursor: pointer;
+    transition: background-color 0.2s;
 }

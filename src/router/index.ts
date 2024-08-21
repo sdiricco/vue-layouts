@@ -1,12 +1,15 @@
-import { createMemoryHistory, createRouter } from 'vue-router'
-const Layout1View = () => import('../views/Layout1.vue')
+import { createWebHistory, createRouter } from 'vue-router'
 const HomeView = () => import('../views/Home.vue')
+const Layout1View = () => import('../views/Layout1.vue')
+const Layout2View = () => import('../views/Layout2.vue')
 
 const router = createRouter({
-  history: createMemoryHistory(),
+  history: createWebHistory(),
   routes: [
-    { path: '/', component: HomeView },
-    { path: '/layout1', component: Layout1View },
+    { path: '/', redirect: '/home' },
+    { path: '/home', name: 'home', component: HomeView },
+    { path: '/layout1', name: 'layout1', component: Layout1View },
+    { path: '/layout2', name: 'layout2', component: Layout2View },
   ],
 })
 
