@@ -14,6 +14,10 @@
       </div>
     </div>
   </div>
+  <footer style="padding: 1rem; background-color: #ccc;">
+    <h3>Footer</h3>
+  </footer>
+
 </template>
 
 <script lang="ts" setup>
@@ -26,7 +30,7 @@ const layouts = [
     responsive: false,
     description: '',
     path: 'layout1',
-    codeLink: 'https://github.com/sdiricco/vue-layouts/blob/master/src/views/Layout1.vue'
+    codeLink: 'https://github.com/sdiricco/vue-layouts/blob/master/src/views/PageTemplate1.vue'
   },
   {
     name: 'Sidebar - Header - Content',
@@ -34,7 +38,15 @@ const layouts = [
     responsive: false,
     description: '',
     path: 'layout2',
-    codeLink: 'https://github.com/sdiricco/vue-layouts/blob/master/src/views/Layout2.vue'
+    codeLink: 'https://github.com/sdiricco/vue-layouts/blob/master/src/views/PageTemplate2.vue'
+  },
+  {
+    name: 'Sidebar - Header - Content - Footer',
+    cssSystem: 'grid',
+    responsive: false,
+    description: '',
+    path: 'layout3',
+    codeLink: 'https://github.com/sdiricco/vue-layouts/blob/master/src/views/PageTemplate3.vue'
   }
 ]
 
@@ -45,8 +57,14 @@ const openCode = (link:string) => window.open(link, '_blank')
 
 <style scoped>
 .container {
-  margin: 16px;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1rem;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <PageTemplate2>
+  <PageTemplate3>
     <template #sidebar>
       <ContentPlaceholder title="Sidebar" :words="200" bg-color="#eee "/>
     </template>
@@ -9,11 +9,14 @@
     <template #content>
       <ContentPlaceholder title="Content" :words="2000" bg-color="#fff"/>
     </template>
-  </PageTemplate2>
+    <template #footer>
+      <ContentPlaceholder title="Footer" bg-color="#ddd"/>
+    </template>
+  </PageTemplate3>
 </template>
 
 <script setup lang="ts">
-import PageTemplate2 from '../components/PageTemplate2.vue';
+import PageTemplate3 from '../components/PageTemplate3.vue';
 import ContentPlaceholder from '../components/shared/ContentPlaceholder.vue';
 </script>
 
