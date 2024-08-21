@@ -30,7 +30,7 @@ const layouts = [
     responsive: false,
     description: '',
     path: 'layout1',
-    codeLink: 'https://github.com/sdiricco/vue-layouts/blob/master/src/views/PageTemplate1.vue'
+    codeLink: 'https://github.com/sdiricco/vue-layouts/blob/master/src/components/PageTemplate1.vue'
   },
   {
     name: 'Sidebar - Header - Content',
@@ -38,7 +38,7 @@ const layouts = [
     responsive: false,
     description: '',
     path: 'layout2',
-    codeLink: 'https://github.com/sdiricco/vue-layouts/blob/master/src/views/PageTemplate2.vue'
+    codeLink: 'https://github.com/sdiricco/vue-layouts/blob/master/src/components/PageTemplate2.vue'
   },
   {
     name: 'Sidebar - Header - Content - Footer',
@@ -46,7 +46,7 @@ const layouts = [
     responsive: false,
     description: '',
     path: 'layout3',
-    codeLink: 'https://github.com/sdiricco/vue-layouts/blob/master/src/views/PageTemplate3.vue'
+    codeLink: 'https://github.com/sdiricco/vue-layouts/blob/master/src/components/PageTemplate3.vue'
   }
 ]
 
