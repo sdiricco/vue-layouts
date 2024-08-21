@@ -6,7 +6,7 @@
         <div><b>css system:</b>{{ layout.cssSystem }}</div>
         <div><b>responsive:</b>{{ layout.responsive }}</div>
       </div>
-      <iframe :src="layout.path"
+      <iframe :src="getLayoutFullPath(layout.path)"
         style="height: 300px; width: 600px; margin-bottom: 1rem; border-radius: 0.5rem; "></iframe>
       <div style="border-top: 1px solid #ccc; padding-top: 1rem; display: flex; justify-content: end; gap: 0.5rem;">
         <button class="button" @click="router.push({ name: layout.path })">Preview</button>
@@ -38,10 +38,8 @@ const layouts = [
   }
 ]
 
-
-const openCode = (link:string) => {
-  window.open(link, '_blank')  
-}
+const getLayoutFullPath = (path:string) => `${router.options.history.base}/${path}`
+const openCode = (link:string) => window.open(link, '_blank')  
 
 </script>
 
