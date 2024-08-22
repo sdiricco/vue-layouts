@@ -12,19 +12,72 @@ body{
     cursor: pointer;
 }
 
+
 .card {
     display: flex;
     flex-direction: column;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 2px;
     padding: 1rem;
+    border: 1px solid;
 }
 
 .button{
     border: none;
-    border-radius: 0.5rem;
-    padding: 0.5rem;
-    background-color: #ccc;
+    padding: 0.5rem 1rem;
+    border-radius: 2px;
+    background-color: #000;
+    font-weight: bold;
+    color: white;
     cursor: pointer;
     transition: background-color 0.2s;
+}
+
+.iframe {
+    height: 400px;
+    width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 0;
+    border: 1px solid;
+    overflow-x: auto;
+}
+
+.border {
+    border: 1px solid;
+}
+
+.border-top {
+    border-top: 1px solid;
+}
+
+.p-1rem {
+    padding: 1rem;
+}
+
+.p-top-1rem {
+    padding-top: 1rem;
+}
+
+.p-bottom-1rem {
+    padding-bottom: 1rem;
+}
+
+.m-bottom-1rem {
+    margin-bottom: 1rem;
+}
+
+
+.flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.justify-content-end {
+    justify-content: end;
+}
+
+.gap-05rem{
+    gap: 0.5rem;
 }

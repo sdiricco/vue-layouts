@@ -1,20 +1,23 @@
 <template>
-  <div class="container">
-    <div class="card" v-for="layout in layouts" :key="layout.path">
-      <div style="margin-bottom: 1rem;">
-        <h2>Layout: {{ layout.name }}</h2>
-        <div><b>css system:</b>{{ layout.cssSystem }}</div>
-        <div><b>responsive:</b>{{ layout.responsive }}</div>
-      </div>
-      <iframe :src="getLayoutFullPath(layout.path)"
-        style="height: 300px; width: 600px; margin-bottom: 1rem; border-radius: 0.5rem; "></iframe>
-      <div style="border-top: 1px solid #ccc; padding-top: 1rem; display: flex; justify-content: end; gap: 0.5rem;">
-        <button class="button" @click="router.push({ name: layout.path })">Preview</button>
-        <button class="button" @click="openCode(layout.codeLink)">Code</button>
+  <div class="container-wrapper">
+
+    <div class="container">
+      <div class="card flex flex-column m-bottom-1rem" v-for="layout in layouts" :key="layout.path">
+        <div style="margin-bottom: 1rem;">
+          <h2>Layout: {{ layout.name }}</h2>
+          <div><b>css system:</b>{{ layout.cssSystem }}</div>
+          <div><b>responsive:</b>{{ layout.responsive }}</div>
+        </div>
+        <iframe :src="getLayoutFullPath(layout.path)" class="iframe" frameborder="0"></iframe>
+        <div class="border-top p-top-1rem flex justify-content-end gap-05rem">
+          <button class="button" @click="router.push({ name: layout.path })">Preview</button>
+          <button class="button" @click="openCode(layout.codeLink)">Code</button>
+        </div>
       </div>
     </div>
   </div>
-  <footer style="padding: 1rem; background-color: #ccc;">
+
+  <footer style="padding: 1rem; background-color: black; color: white;">
     <h3>Footer</h3>
   </footer>
 
@@ -47,24 +50,51 @@ const layouts = [
     description: '',
     path: 'layout3',
     codeLink: 'https://github.com/sdiricco/vue-layouts/blob/master/src/components/PageTemplate3.vue'
+  },
+  {
+    name: 'Header - Content - Footer',
+    cssSystem: 'grid',
+    responsive: false,
+    description: '',
+    path: 'layout4',
+    codeLink: 'https://github.com/sdiricco/vue-layouts/blob/master/src/components/PageTemplate4.vue'
+  },
+  {
+    name: 'Header - Content',
+    cssSystem: 'grid',
+    responsive: false,
+    description: '',
+    path: 'layout5',
+    codeLink: 'https://github.com/sdiricco/vue-layouts/blob/master/src/components/PageTemplate5.vue'
   }
 ]
 
-const getLayoutFullPath = (path:string) => `${router.options.history.base}/${path}`
-const openCode = (link:string) => window.open(link, '_blank')  
+const getLayoutFullPath = (path: string) => `${router.options.history.base}/${path}`
+const openCode = (link: string) => window.open(link, '_blank')
 
 </script>
 
 <style scoped>
-.container {
+
+.container-wrapper{
   max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  overflow-x: auto;
+}
+
+.container {
+  max-width: 800px;
+  min-width: 400px;
   margin-right: auto;
   margin-left: auto;
   margin-top: 2rem;
   margin-bottom: 2rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
+  text-align: center;
+
 }
 </style>
