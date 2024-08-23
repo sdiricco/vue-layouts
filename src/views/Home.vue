@@ -162,3 +162,4 @@ const openLink = (link: string) => window.open(link, '_blank')
 }
 
 </style>
+
