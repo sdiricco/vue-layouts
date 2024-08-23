@@ -4,7 +4,7 @@
       <ContentPlaceholder title="Sidebar" :words="200" background-color="#000" color="#fff"/>
     </template>
     <template #content>
-      <ContentPlaceholder title="Content" :words="2000" background-color="#fff"/>
+      <ContentPlaceholder title="Content" :words="2000"/>
     </template>
   </PageTemplate1>
 </template>
